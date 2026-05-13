@@ -1,11 +1,26 @@
 public class PrimeCheck {
     public static void main(String[] args) {
-        int n = 5;
-        int result = 1;
-        for(int i=1;i<=n;i++) {
-            result *= i;
+
+        int n = 17;
+        boolean isPrime = true;
+
+        if (n <= 1) {
+            isPrime = false;
+        } else {
+
+            for (int i = 2; i <= n / 2; i++) {
+
+                if (n % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
         }
-        System.out.println("Example program: PrimeCheck");
-        System.out.println("Result value: " + result);
+
+        if (isPrime) {
+            System.out.println(n + " is a Prime Number");
+        } else {
+            System.out.println(n + " is not a Prime Number");
+        }
     }
 }
