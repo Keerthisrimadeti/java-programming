@@ -1,11 +1,15 @@
 public class ReverseNumber {
     public static void main(String[] args) {
-        int n = 5;
-        int result = 1;
-        for(int i=1;i<=n;i++) {
-            result *= i;
+
+        int n = 1234;
+        int reverse = 0;
+
+        while(n != 0) {
+            int digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n = n / 10;
         }
-        System.out.println("Example program: ReverseNumber");
-        System.out.println("Result value: " + result);
+
+        System.out.println("Reversed Number: " + reverse);
     }
 }
